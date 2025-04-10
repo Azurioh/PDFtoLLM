@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+:root {
+  --transition-delay: .3s;
+  --black: #252525;
+  --responsive-width: min(80%, 900px);
+  --shadow: 5px 5px 0px var(--black)
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Rubik', 'Poppins', sans-serif;
+}
+
+.container {
+  min-height: 100%;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar {
+  width: 100%;
+  border-bottom: 3px solid var(--black);
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.navbarContainer {
+  width: var(--responsive-width);
+  position: relative;
+  padding: 20px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.headerTitleBlue {
+  color: blue;
+  margin-right: 3px;
+}
+
+.headerTitleGreen {
+  color: green;
+  margin-left: 3px;
+}
+
+.headerTitle, .headerLinks {
+  transition: var(--transition-delay);
+}
+
+.headerTitle a, .headerLinks a {
+  color: var(--black);
+  text-decoration: none;
+}
+
+.headerTitle:hover, .headerLinks:hover {
+  opacity: 0.70;
+}
+
+.githubIcon {
+  margin-right: 5px;
+}
+
+.headerLinks a {
+  text-decoration: none;
+}
+
+.content {
+  width: var(--responsive-width);
+  position: relative;
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contentHeader {
+  width: 80%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contentHeader h1 {
+  font-size: 4rem;
+  font-weight: 600;
+}
+
+.contentHeader p {
+  font-size: 1.3rem;
+  margin: 30px 0;
+  font-weight: 300;
+}
+
+.contentCard, .contentResponse {
+  width: 100%;
+  padding: 20px;
+  background-color: antiquewhite;
+  border: 3px solid var(--black);
+  box-shadow: var(--shadow);
+  align-items: center;
+}
+
+.uploadContainer {
+  width: 80%;
+  margin-right: 20px;
+}
+
+.convertButton {
+  width: 20%;
+}
+
+.contentResponse {
+  margin-top: 20px;
+  flex-direction: column;
+}
+
+.contentResponseTitle {
+  width: 100%;
+  position: relative;
+  padding: 10px 10px;
+}
+
+.contentResponseCard {
+  text-align: left;
+  max-height: 700px;
+  width: 100%;
+  overflow: scroll;
+}
+
+.copyButton {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+}
