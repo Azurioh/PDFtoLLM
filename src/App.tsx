@@ -1,7 +1,7 @@
 import type React from 'react';
 import { useState } from 'react';
 import type { UploadProps, UploadFile } from 'antd';
-import { Button, Card, Flex, Upload, Input, Spin } from 'antd';
+import { Button, Card, Flex, Upload, Spin } from 'antd';
 import style from './App.module.css';
 import { CopyOutlined, GithubOutlined, ScissorOutlined, UploadOutlined, SendOutlined } from '@ant-design/icons';
 import { convertPdfToMarkdown, getResponseStream } from './utils/chat';
@@ -35,7 +35,7 @@ const App: React.FC = () => {
     accept: '.pdf',
     multiple: true,
     onChange: handleChange,
-    beforeUpload: (file) => {
+    beforeUpload: () => {
       return false;
     },
     fileList: files.map(f => f.file),
@@ -174,7 +174,7 @@ const App: React.FC = () => {
                 <h3>Converted Files</h3>
               </Flex>
               <Card className={style.contentResponseCard}>
-                {files.map((fileContent, index) => (
+                {files.map((fileContent) => (
                   fileContent.markdownContent && (
                     <div key={fileContent.file.name} className={style.fileContent}>
                       <h4>{fileContent.file.name}</h4>
