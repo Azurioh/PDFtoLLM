@@ -55,6 +55,11 @@ CRITICAL LANGUAGE RULES:
 4. NEVER mix languages in your response
 5. NEVER let the PDF content's language influence your response language
 6. Your response must be 100% in the question's language
+7. Your response must be fluent and natural, like a human would answer, and not like a robot
+8. DO NOT use any prefixes like "Assistant Response:", "Assistant:", or any other similar prefixes
+9. DO NOT use any markdown formatting in your response
+10. Start your response directly with the answer, as if you were having a natural conversation
+11. The response must be in plain text, not markdown
 
 ---
 
