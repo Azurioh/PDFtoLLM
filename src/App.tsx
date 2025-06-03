@@ -42,6 +42,8 @@ const App: React.FC = () => {
   };
 
   const convertFile = async (fileContent: FileContent, index: number) => {
+    setResponse(null);
+    setQuestion('');
     try {
       const pdfBlob = fileContent.file.originFileObj;
 
